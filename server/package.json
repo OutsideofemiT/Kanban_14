@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "build": "npx tsc",
-    "start": "npm run build && node dist/server.js --ignore client",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "ts-node src/seeds/index.ts"
+    "seed": "node dist/seeds/index.js"
   },
   "nodemonConfig": {
     "watch": [
