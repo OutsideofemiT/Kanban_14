@@ -1,23 +1,29 @@
-import { Router } from 'express';
-import { User } from '../models/user.js';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-const router = Router(); // 👈 define router BEFORE using it
-export const login = async (req, res) => {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.login = void 0;
+const express_1 = require("express");
+const user_js_1 = require("../models/user.js");
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const bcrypt_1 = __importDefault(require("bcrypt"));
+const router = (0, express_1.Router)(); // 👈 define router BEFORE using it
+const login = async (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) {
         return res.status(400).json({ message: "Username and password are required" });
     }
     try {
-        const user = await User.findOne({ where: { username } });
+        const user = await user_js_1.User.findOne({ where: { username } });
         if (!user) {
             return res.status(401).json({ message: "Invalid credentials" });
         }
-        const validPassword = await bcrypt.compare(password, user.password);
+        const validPassword = await bcrypt_1.default.compare(password, user.password);
         if (!validPassword) {
             return res.status(401).json({ message: "Invalid credentials" });
         }
-        const token = jwt.sign({ username: user.username, id: user.id }, process.env.JWT_SECRET, { expiresIn: '2h' });
+        const token = jsonwebtoken_1.default.sign({ username: user.username, id: user.id }, process.env.JWT_SECRET, { expiresIn: '2h' });
         return res.json({ token });
     }
     catch (err) {
@@ -25,5 +31,6 @@ export const login = async (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
     }
 };
-router.post('/login', login);
-export default router;
+exports.login = login;
+router.post('/login', exports.login);
+exports.default = router;
