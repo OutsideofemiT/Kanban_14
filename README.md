@@ -1,5 +1,11 @@
 # 📌 Kanban Board with JWT Authentication
 
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Tech](https://img.shields.io/badge/stack-Full%20Stack-blueviolet)
+![Made-With-ChatGPT](https://img.shields.io/badge/assisted%20by-ChatGPT-ff69b4)
+![Author](https://img.shields.io/badge/Created%20by-Carmen%20Wheeler-blue)
+
 This project is a full-stack Kanban board application enhanced with secure user authentication using JSON Web Tokens (JWT). It allows users to securely log in, manage tasks across different columns, and automatically handles session management through token expiration.
 
 ---
@@ -38,7 +44,7 @@ This Kanban board application is designed for agile teams to manage tasks effici
 1. **Clone the repo**
    ```bash
    git clone https://github.com/OutsideofemiT/Kanban_14.git
-   cd kanban-board
+   cd Kanban_14
    ```
 
 2. **Install dependencies**
@@ -56,7 +62,7 @@ This Kanban board application is designed for agile teams to manage tasks effici
 
 4. **Run locally**
    ```bash
-   # From root
+   # From root directory
    npm run dev
    ```
 
@@ -92,13 +98,14 @@ This Kanban board application is designed for agile teams to manage tasks effici
 
 ## 🌐 Deployment
 
-This app is deployed on Render:
-https://kanban-14.onrender.com
+This app is deployed on Render:  
+🔗 [https://kanban-14.onrender.com](https://kanban-14.onrender.com)
 
 ---
 
 ## 👩‍💻 Author
 
-Created by Carmen Wheeler Github:(https://github.com/OutsideofemiT) 
-Credits to the starter code provided by the curriculum team.
+Created by [Carmen Wheeler](https://github.com/OutsideofemiT)  
+Credits to the starter code provided by the curriculum team.  
+Badges generated with [Shields.io](https://shields.io).
 
