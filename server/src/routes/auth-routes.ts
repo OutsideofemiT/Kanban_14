@@ -30,8 +30,8 @@ export const login = async (req: Request, res: Response) => {
       process.env.JWT_SECRET!,
       { expiresIn: '2h' }
     );
-
     return res.json({ token });
+    
   } catch (err) {
     console.error("Login error:", err);
    return res.status(500).json({ message: "Internal server error" });

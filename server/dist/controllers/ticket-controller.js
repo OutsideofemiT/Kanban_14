@@ -1,5 +1,5 @@
-import { Ticket } from '../models/ticket.js';
-import { User } from '../models/user.js';
+import { Ticket } from '../models/ticket';
+import { User } from '../models/user';
 // GET /tickets
 export const getAllTickets = async (_req, res) => {
     try {
