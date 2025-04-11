@@ -31,10 +31,10 @@ export const login = async (req: Request, res: Response) => {
       { expiresIn: '2h' }
     );
 
-    res.json({ token });
+    return res.json({ token });
   } catch (err) {
     console.error("Login error:", err);
-    res.status(500).json({ message: "Internal server error" });
+   return res.status(500).json({ message: "Internal server error" });
   }
 };
 
