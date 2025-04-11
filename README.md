@@ -101,6 +101,9 @@ This Kanban board application is designed for agile teams to manage tasks effici
 This app is deployed on Render:  
 🔗 [https://kanban-14.onrender.com](https://kanban-14.onrender.com)
 
+![Login Page](./client/public/Kanban1.jpg)
+![Kanban Board](./client/public/kanban2.jpb)
+
 ---
 
 ## 👩‍💻 Author
