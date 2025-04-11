@@ -102,7 +102,7 @@ This app is deployed on Render:
 🔗 [https://kanban-14.onrender.com](https://kanban-14.onrender.com)
 
 ![Login Page](./client/public/Kanban1.jpg)
-![Kanban Board](./client/public/kanban2.jpb)
+![Kanban Board](./client/public/Kanban2.jpb)
 
 ---
 
